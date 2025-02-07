@@ -2,8 +2,8 @@ async function jokeGen() {
     try {
         const response = await fetch("https://icanhazdadjoke.com/", {
             headers: {
-              'Accept': 'application/json'
-            }
+                'Accept': 'application/json'
+              }
           });
         const data = await response.json();
         const joke = data.joke;
@@ -22,7 +22,7 @@ module.exports = {
         "contexts": [0, 1, 2]
     },
     async execute(interaction) {
-
+        await interaction.deferReply();
         try {
             response = await jokeGen();
         } catch (error) {
@@ -30,6 +30,6 @@ module.exports = {
             response = 'There was an error processing your request.';
         }
 
-        await interaction.reply(response);
+        await interaction.editReply(response);
     }
 };

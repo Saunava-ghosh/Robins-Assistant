@@ -19,7 +19,7 @@ module.exports = {
         "contexts": [0, 1, 2]
     },
     async execute(interaction) {
-
+        await interaction.deferReply();
         try {
             response = await factGen();
         } catch (error) {
@@ -27,6 +27,6 @@ module.exports = {
             response = 'There was an error processing your request.';
         }
 
-        await interaction.reply(response);
+        await interaction.editReply(response);
     }
 };
