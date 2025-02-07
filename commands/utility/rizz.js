@@ -5,7 +5,7 @@ async function pickupLineGen() {
         const pickup_line = data.text ;
         return pickup_line;
     } catch (error) {
-        console.error('Error fetching quote:', error);
+        console.error('Error fetching pickup line:', error);
         throw error;
     }
 }
