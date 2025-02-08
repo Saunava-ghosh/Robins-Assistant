@@ -4,10 +4,10 @@ async function dogGen() {
     try {
         const response = await fetch("https://dog.ceo/api/breeds/image/random");
         const data = await response.json();
-        const pickup_line = data.message ;
-        return pickup_line;
+        const dog = data.message ;
+        return dog;
     } catch (error) {
-        console.error('Error fetching pickup line:', error);
+        console.error('Error fetching dog pic:', error);
         throw error;
     }
 }
