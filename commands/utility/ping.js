@@ -6,6 +6,6 @@ module.exports = {
 		"contexts" : [0,1,2]
 	},
 	async execute(interaction) {
-		await interaction.reply('Pong!');
+		await interaction.reply(`🏓Latency is ${Date.now() - message.createdTimestamp}ms `);
 	},
 };

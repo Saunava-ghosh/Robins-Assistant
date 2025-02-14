@@ -1,8 +1,8 @@
 const {EmbedBuilder} = require('discord.js');
-const {pexels_api_key} = require('../../config.json');
+const {pexelsApiKey} = require('../../config.json');
 const {createClient} = require('pexels');
 
-const client = createClient(pexels_api_key);
+const client = createClient(pexelsApiKey);
 
 
 async function redPandaGen() {

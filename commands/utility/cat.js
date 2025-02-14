@@ -9,7 +9,7 @@ async function catGen() {
         
         return cat;
     } catch (error) {
-        console.error('Error fetching dog pic:', error);
+        console.error('Error fetching cat pic:', error);
         throw error;
     }
 }

@@ -7,7 +7,7 @@ async function dogGen() {
         const dog = data.message ;
         return dog;
     } catch (error) {
-        console.error('Error fetching dog pic:', error);
+        console.error('Error fetching dog:', error);
         throw error;
     }
 }

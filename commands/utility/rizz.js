@@ -1,8 +1,14 @@
 async function pickupLineGen() {
     try {
-        const response = await fetch("https://rizzapi.vercel.app/random");
-        const data = await response.json();
-        const pickup_line = data.text ;
+        const response = await fetch("https://api.jcwyt.com/pickup");
+        const data = await response.text();
+        let pickup_line = data
+        if (data.includes("{author}")) {
+            pickup_line = data.replace("{author}","")
+        }
+        if (data.includes("{answer}")) {
+            pickup_line = data.replace("{answer}","")
+        }
         return pickup_line;
     } catch (error) {
         console.error('Error fetching pickup line:', error);
